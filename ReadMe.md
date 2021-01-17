@@ -1,17 +1,20 @@
 
-# Fibabanka Java Bootcamp 3. Hafta Ödev
+# Java Restaurant Simulator
 
-Ödev bir restoran simulasyonu. Restoranda 2 tane şef, 3 tane garson ve 5 tane de masa bulunuyor. Restoran sürekli açık ve
-müşteriler restorana gelip boş masalara oturup garsonlara sipariş veriyor. Garsonlar da siparişleri şeflere iletip daha 
-sonra hazır olan siparişleri masalara dağıtıyor. Her müşterinin masada belli bir süre oturma hakkı olduğunu düşünelim.
-Vakti dolan müşteri masadan kalkar ve yeni müşteriler restorana girer. Her masada bir müşteri oturabildiğini ve müşterilerin 
-teker teker restorana geldiğini varsayalım. Her müşteri istediği kadar sipariş verebilir ama masada oturma süresi limitli.
 
-Burada önemli olan gerçek hayatta olduğu gibi masalarda oturan müşterilerin, sipariş alan garsonların ve siparişleri hazırlayan
-şeflerin gerçekten olduğu gibi birbirlerinden bağımsız çalışabilmesi ve her işlem sırasında ve sonrasında simulasyonun doğru
-çalıştığını anlayabilmemiz için uygun logların ekrana basılması gerekir.
+Proje, nesne yönelimli programlama göz önünde bulundurularak geliştirilmiş olan bir restoran simulasyonudur. Chef, Meal, WaitPerson, BusBoy
+ve main class olan Restaurant da dahil olmak üzere 5 adet sınıf oluşturulmuştur. Garson, şefin yemek hazırlamasını bekler. Şef bir yemeği 
+hazırladığında garsona haber verir, garson yemeği alıp müşteriye teslim eder ve beklemeye döner. Yemek müşteriye teslim edildikten bir süre 
+sonra sonra bekleme görevlisi temizlik için garsona haber verir.
 
-Ödev tamamen java dilinde multithread özelliğinin kullanılma yeteneğini ölçmeye yöneliktir. Her bir müşteriyi, garsonu ve şefi
-birer thred olarak düşünebilirsiniz.
+Garson, şef ve bekleme görevlisi iş birliği içerisinde çalışırlar. Şef üretimi, bekleme görevlisi ise tüketimi temsil eder. Yemekler üretilirken 
+ve tüketilirken her iki olay da birbirleri ile anlaşmalı ve duruma göre sistem düzenli bir şekilde kilitlenmelidir. Bunun için Lock ve Condition
+objeleri oluşturulmuştur ve çalışma sistemi kontrol altına alınmıştır.
 
-Ödev teslim tarihi 16 Ocak saat 00:00.
+Gerçek hayatta olduğu gibi masalarda oturan müşterilerin, sipariş alan garsonların ve siparişleri hazırlayan şeflerin gerçekten olduğu gibi
+birbirlerinden bağımsız çalışabilmesi ve her işlem sırasında ve sonrasında simulasyonun doğru çalıştığını anlayabilmemiz için uygun loglar ekrana
+basılmıştır. 
+
+Ekran çıktısı aşağıdaki gibidir:
+
+<img src="src/org/kodluyoruz/code_output.png"/>
